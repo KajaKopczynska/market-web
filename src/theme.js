@@ -2,6 +2,8 @@ export const theme = {
     colors: {
         white: "#FFFFFF",
         alabaster: "#F7F7F7",
+        doveGray: "#666666",
+        mineShaft: "#222222",
         black: "#000000",
     },
 
