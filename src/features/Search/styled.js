@@ -11,7 +11,7 @@ export const SearchWrapper = styled.div`
 export const SearchInput = styled.input`
   background-color: ${({ theme }) => theme.colors.white};
   height: 20px;
-  width: 100%;
+  width: 500px;
   padding: 15px;
   border: 1px solid ${({ theme }) => theme.colors.silverChalice};
   border-radius: 5px;
@@ -26,7 +26,7 @@ export const SearchInput = styled.input`
   }
 
   @media (max-width: ${mobileBP}px) {
-    width: 90%;
+    width: 275px;
   }
 `;
 
