@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: inherit;
     }
     body {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
         background: ${({ theme }) => theme.colors.white};
         color: ${({ theme }) => theme.colors.black};
         justify-content: center;
