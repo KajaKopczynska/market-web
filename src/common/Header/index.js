@@ -1,5 +1,6 @@
-import { StyledHeader, Wrapper, LinksWrapper, TitleLink, TittleText, Navigation, StyledNavLink, StyledBookIcon, NavigationWrapper, StyledUserAccountIcon, StyledClipboardIconIcon, StyledClipboardIcon, StyledBasketIcon } from "./styled";
-// import { Search } from "../../features/Search";
+import { Search } from "../../features/Search";
+import { StyledHeader, Wrapper, TitleLink, TittleText, Navigation, StyledNavLink, StyledBookIcon, NavigationWrapper, StyledUserAccountIcon, StyledClipboardIconIcon, StyledClipboardIcon, StyledBasketIcon } from "./styled";
+
 
 const Header = () => {
 
@@ -10,7 +11,7 @@ const Header = () => {
                     <StyledBookIcon />
                     <TittleText>Book Shop</TittleText>
                 </TitleLink>
-                {/* <Search /> */}
+                <Search />
                 <NavigationWrapper>
                     <nav>
                         <Navigation>
