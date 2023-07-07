@@ -1,5 +1,20 @@
 import { Search } from "../../features/Search";
-import { StyledHeader, Wrapper, TitleLink, TittleText, Navigation, StyledNavLink, StyledBookIcon, NavigationWrapper, StyledUserAccountIcon, StyledClipboardIconIcon, StyledClipboardIcon, StyledBasketIcon, SearchWrapper } from "./styled";
+import { CategoryMenu } from "./CategoryMenu";
+import {
+    StyledHeader,
+    Wrapper,
+    TitleLink,
+    TittleText,
+    Navigation,
+    StyledNavLink,
+    StyledBookIcon,
+    NavigationWrapper,
+    StyledUserAccountIcon,
+    StyledClipboardIcon,
+    StyledBasketIcon,
+    SearchWrapper,
+    CategoryMenuWrapper,
+} from "./styled";
 
 
 const Header = () => {
@@ -38,6 +53,9 @@ const Header = () => {
                         </Navigation>
                     </nav>
                 </NavigationWrapper>
+                <CategoryMenuWrapper>
+                    <CategoryMenu />
+                </CategoryMenuWrapper>
             </Wrapper>
         </StyledHeader>
     );
