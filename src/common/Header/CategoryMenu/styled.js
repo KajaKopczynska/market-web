@@ -19,6 +19,7 @@ export const MenuItem = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+  font-weight: 300;
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -30,10 +31,11 @@ export const StyledNavLink = styled(NavLink)`
   &::after {
     content: '';
     position: absolute;
-    bottom: -1px;
-    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
-    height: 1px;
+    height: 0.5px;
     background-color: ${({ theme }) => theme.colors.mineShaft};
     transition: width 0.3s;
   }
