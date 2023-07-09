@@ -3,16 +3,16 @@ import { MenuItem, StyledMenu, StyledNavLink } from "./styled";
 export const CategoryMenu = () => (
   <StyledMenu>
     <MenuItem>
-      <StyledNavLink>Książki</StyledNavLink>
+      <StyledNavLink>Books</StyledNavLink>
     </MenuItem>
     <MenuItem>
-      <StyledNavLink>Audiobooki</StyledNavLink>
+      <StyledNavLink>Audiobooks</StyledNavLink>
     </MenuItem>
     <MenuItem>
-      <StyledNavLink>Muzyka</StyledNavLink>
+      <StyledNavLink>Music</StyledNavLink>
     </MenuItem>
     <MenuItem>
-      <StyledNavLink>Gry</StyledNavLink>
+      <StyledNavLink>Games</StyledNavLink>
     </MenuItem>
   </StyledMenu>
 );

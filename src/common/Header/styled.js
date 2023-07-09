@@ -10,13 +10,30 @@ const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 export const StyledHeader = styled.header`
   background: ${({ theme }) => theme.colors.alabaster};
   color: ${({ theme }) => theme.colors.black};
-  padding: 23px 16px;
-  height: 94px;
+  padding: 16px;
+  height: 130px;
   box-shadow: 0px 0px 3px 2px #e0e0e0;
+  width: 100%;
 
   @media (max-width: ${mobileBP}px) {
-    padding: 16px;
-    height: 132px;
+    padding: 8px;
+    height: 160px;
+  }
+`;
+
+export const Wrapper = styled.div`
+  max-width: 1368px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+
+  @media (max-width: ${mobileBP}px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 45px 30px;
+    align-items: center;
+    grid-gap: 6px;
   }
 `;
 
@@ -25,40 +42,46 @@ export const TitleLink = styled(Link)`
   text-decoration: none;
   display: grid;
   grid-template-columns: 50px 1fr;
-  gap: 12px;
+  grid-gap: 12px;
   align-items: center;
   white-space: nowrap;
 
   @media (max-width: ${mobileBP}px) {
-    grid-template-columns: 20px 1fr;
-    grid-template-columns: auto;
-  }
-`;
-
-export const Wrapper = styled.div`
-  max-width: 1368px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  grid-template-columns: auto minmax(205px, 432px);
-
-  @media (max-width: ${mobileBP}px) {
-    grid-template-columns: 20px 20px;
-    flex-wrap: wrap;
-    justify-content: center; /* zmienione */
-    gap: 14px;
-    align-items: center;
+    grid-gap: 6px;
+    justify-self: start;
   }
 `;
 
 export const NavigationWrapper = styled.div`
   display: grid;
-  gap: 80px;
+  grid-gap: 80px;
 
   @media (max-width: ${mobileBP}px) {
-    flex-direction: column;
-    gap: 20px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-gap: 20px;
+    justify-self: center;
+  }
+`;
+
+export const SearchWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: ${mobileBP}px) {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+`;
+
+export const CategoryMenuWrapper = styled.div`
+   grid-column-start: 2;
+
+  @media (max-width: ${mobileBP}px) {
+   grid-row-start: 3;
+   grid-column-start: 1;
+   grid-column-end: 3;
   }
 `;
 
@@ -79,7 +102,9 @@ export const TittleText = styled.div`
   flex-shrink: 0;
 
   @media (max-width: ${mobileBP}px) {
-    font-size: 13px;
+    font-size: 18px;
+    white-space: nowrap;
+    justify-self: center;
   }
 `;
 
@@ -88,10 +113,10 @@ export const Navigation = styled.div`
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 16px;
+  grid-gap: 16px;
 
   @media (max-width: ${mobileBP}px) {
-    gap: 0;
+    grid-gap: 0;
     justify-content: center;
   }
 `;
@@ -100,7 +125,7 @@ export const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.colors.mineShaft};
   background: none;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 300;
   margin: 13.5px 6px;
   text-decoration: none;
   display: grid;
@@ -123,6 +148,13 @@ export const StyledNavLink = styled(NavLink)`
   }
 `;
 
+export const NavLinkText = styled.span`
+
+  @media (max-width: ${mobileBP}px) {
+    display: none;
+  }
+`;
+
 export const StyledUserAccountIcon = styled(UserAccountIcon)`
   flex-shrink: 0;
   width: 26px;
@@ -133,8 +165,8 @@ export const StyledUserAccountIcon = styled(UserAccountIcon)`
   }
 
   @media (max-width: ${mobileBP}px) {
-    width: 17px;
-    height: 17px;
+    width: 30px;
+    height: 30px;
   }
 `;
 
@@ -148,8 +180,8 @@ export const StyledClipboardIcon = styled(ClipboardIcon)`
   }
 
   @media (max-width: ${mobileBP}px) {
-    width: 17px;
-    height: 17px;
+    width: 30px;
+    height: 30px;
   }
 `;
 
@@ -163,16 +195,8 @@ export const StyledBasketIcon = styled(BasketIcon)`
   }
 
   @media (max-width: ${mobileBP}px) {
-    width: 17px;
-    height: 17px;
+    width: 30px;
+    height: 30px;
   }
 `;
 
-export const SearchWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: ${mobileBP}px) {
-    order: 3;
-  }
-`;

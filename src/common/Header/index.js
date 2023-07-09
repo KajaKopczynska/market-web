@@ -14,8 +14,8 @@ import {
     StyledBasketIcon,
     SearchWrapper,
     CategoryMenuWrapper,
+    NavLinkText,
 } from "./styled";
-
 
 const Header = () => {
 
@@ -35,19 +35,25 @@ const Header = () => {
                             <li>
                                 <StyledNavLink>
                                     <StyledUserAccountIcon />
-                                    ACCOUNT
+                                    <NavLinkText>
+                                        ACCOUNT
+                                    </NavLinkText>
                                 </StyledNavLink>
                             </li>
                             <li>
                                 <StyledNavLink>
                                     <StyledClipboardIcon />
-                                    CLIPBOARD
+                                    <NavLinkText>
+                                        CLIPBOARD
+                                    </NavLinkText>
                                 </StyledNavLink>
                             </li>
                             <li>
                                 <StyledNavLink>
                                     <StyledBasketIcon />
-                                    BASKET
+                                    <NavLinkText>
+                                        BASKET
+                                    </NavLinkText>
                                 </StyledNavLink>
                             </li>
                         </Navigation>
