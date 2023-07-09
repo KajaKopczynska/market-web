@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.js": "/market-web/static/js/main.3ed25857.js",
+    "main.js": "/market-web/static/js/main.ad810c58.js",
     "static/js/988.2c35179d.chunk.js": "/market-web/static/js/988.2c35179d.chunk.js",
+    "static/media/BestSellingCrime.jpg": "/market-web/static/media/BestSellingCrime.2f228bec12689dbb10a1.jpg",
     "static/media/BookIcon.svg": "/market-web/static/media/BookIcon.a5bff0f6bc8994bca3496c4138b5499c.svg",
     "static/media/BasketIcon.svg": "/market-web/static/media/BasketIcon.bfc30d62a495bedcd7cecbf6ed8acab3.svg",
     "static/media/UserAccountIcon.svg": "/market-web/static/media/UserAccountIcon.047fd0b38a7d89808ae838a919640e41.svg",
     "static/media/ClipboardIcon.svg": "/market-web/static/media/ClipboardIcon.b164565681c59f3fde2a95f74593a547.svg",
     "static/media/SearchIcon.svg": "/market-web/static/media/SearchIcon.c4379140ddbc4c774edeb5118b603a6b.svg",
     "index.html": "/market-web/index.html",
-    "main.3ed25857.js.map": "/market-web/static/js/main.3ed25857.js.map",
+    "main.ad810c58.js.map": "/market-web/static/js/main.ad810c58.js.map",
     "988.2c35179d.chunk.js.map": "/market-web/static/js/988.2c35179d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3ed25857.js"
+    "static/js/main.ad810c58.js"
   ]
 }
