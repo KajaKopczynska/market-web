@@ -32,7 +32,8 @@ export const StyledNavLink = styled(NavLink)`
   position: relative;
 
   @media (max-width: ${mobileBP}px) {
-    padding: 6px 16px 2px 0;
+    padding: 0;
+    margin: 4px 10px 2px 10px;
   }
 
   &::after {
