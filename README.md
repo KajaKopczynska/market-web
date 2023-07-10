@@ -3,6 +3,8 @@
 
 The application is under construction and is not yet fully functional. It serves as a simulated online store, showcasing the functionality of its user interface.
 
+## Demo
+Look at this - [Click here!](https://kajakopczynska.github.io/market-web/)
 
 ### `npm run build`
 
