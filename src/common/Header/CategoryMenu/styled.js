@@ -31,6 +31,10 @@ export const StyledNavLink = styled(NavLink)`
   padding: 8px 8px 2px 8px;
   position: relative;
 
+  &:hover {
+    color: ${({ theme }) => theme.colors.cornflowerBlue};
+  }
+
   @media (max-width: ${mobileBP}px) {
     padding: 0;
     margin: 4px 10px 2px 10px;
@@ -43,8 +47,8 @@ export const StyledNavLink = styled(NavLink)`
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 0.5px;
-    background-color: ${({ theme }) => theme.colors.mineShaft};
+    height: 1px;
+    background-color: ${({ theme }) => theme.colors.cornflowerBlue};
     transition: width 0.3s;
   }
 

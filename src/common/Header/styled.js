@@ -88,6 +88,7 @@ export const CategoryMenuWrapper = styled.div`
 export const StyledBookIcon = styled(BookIcon)`
   flex-shrink: 0;
   width: 50px;
+  color: ${({ theme }) => theme.colors.cornflowerBlue};
 
   @media (max-width: ${mobileBP}px) {
     width: 26px;
@@ -96,7 +97,8 @@ export const StyledBookIcon = styled(BookIcon)`
   }
 `;
 
-export const TittleText = styled.div`
+export const TitleText = styled.div`
+  color: ${({ theme }) => theme.colors.mineShaft};
   font-size: 24px;
   font-weight: 500;
   flex-shrink: 0;
@@ -134,7 +136,7 @@ export const StyledNavLink = styled(NavLink)`
 
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.doveGray};
+    color: ${({ theme }) => theme.colors.cornflowerBlue};
   }
 
   &.active {

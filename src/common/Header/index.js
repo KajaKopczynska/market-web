@@ -4,7 +4,6 @@ import {
     StyledHeader,
     Wrapper,
     TitleLink,
-    TittleText,
     Navigation,
     StyledNavLink,
     StyledBookIcon,
@@ -15,6 +14,7 @@ import {
     SearchWrapper,
     CategoryMenuWrapper,
     NavLinkText,
+    TitleText,
 } from "./styled";
 
 const Header = () => {
@@ -24,7 +24,7 @@ const Header = () => {
             <Wrapper>
                 <TitleLink>
                     <StyledBookIcon />
-                    <TittleText>Book Shop</TittleText>
+                    <TitleText>Book Shop</TitleText>
                 </TitleLink>
                 <SearchWrapper>
                     <Search />
