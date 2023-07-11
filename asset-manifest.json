@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/market-web/static/js/main.9b267f32.js",
+    "main.js": "/market-web/static/js/main.1dde0869.js",
     "static/js/988.2c35179d.chunk.js": "/market-web/static/js/988.2c35179d.chunk.js",
     "static/media/BestSellingCrime.jpg": "/market-web/static/media/BestSellingCrime.2f228bec12689dbb10a1.jpg",
     "static/media/PlaneIcon.svg": "/market-web/static/media/PlaneIcon.47feae5710830afb1fc0acc1e06a5ad3.svg",
@@ -10,10 +10,10 @@
     "static/media/ClipboardIcon.svg": "/market-web/static/media/ClipboardIcon.b164565681c59f3fde2a95f74593a547.svg",
     "static/media/SearchIcon.svg": "/market-web/static/media/SearchIcon.c4379140ddbc4c774edeb5118b603a6b.svg",
     "index.html": "/market-web/index.html",
-    "main.9b267f32.js.map": "/market-web/static/js/main.9b267f32.js.map",
+    "main.1dde0869.js.map": "/market-web/static/js/main.1dde0869.js.map",
     "988.2c35179d.chunk.js.map": "/market-web/static/js/988.2c35179d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.9b267f32.js"
+    "static/js/main.1dde0869.js"
   ]
 }
