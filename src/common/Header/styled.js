@@ -10,8 +10,8 @@ const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 export const StyledHeader = styled.header`
   background: ${({ theme }) => theme.colors.alabaster};
   color: ${({ theme }) => theme.colors.black};
-  padding: 16px;
-  height: 130px;
+  /* padding: 16px; */
+  height: auto;
   box-shadow: 0px 0px 3px 2px #e0e0e0;
   width: 100%;
 
@@ -60,7 +60,7 @@ export const NavigationWrapper = styled.div`
     grid-row-start: 1;
     grid-column-start: 2;
     grid-gap: 20px;
-    justify-self: center;
+    /* justify-content: end; */
   }
 `;
 
@@ -116,6 +116,7 @@ export const Navigation = styled.div`
   padding: 0;
   display: flex;
   grid-gap: 16px;
+  justify-content: end;
 
   @media (max-width: ${mobileBP}px) {
     grid-gap: 0;

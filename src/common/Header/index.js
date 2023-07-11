@@ -1,5 +1,6 @@
 import { Search } from "../../features/Search";
 import { CategoryMenu } from "./CategoryMenu";
+import { TopMenu } from "./TopMenu";
 import {
     StyledHeader,
     Wrapper,
@@ -21,6 +22,7 @@ const Header = () => {
 
     return (
         <StyledHeader>
+            <TopMenu></TopMenu>
             <Wrapper>
                 <TitleLink>
                     <StyledBookIcon />
