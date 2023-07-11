@@ -16,7 +16,7 @@ export const StyledHeader = styled.header`
   width: 100%;
 
   @media (max-width: ${mobileBP}px) {
-    padding: 8px;
+    /* padding: 8px; */
     height: 160px;
   }
 `;
