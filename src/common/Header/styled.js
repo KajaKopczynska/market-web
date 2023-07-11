@@ -14,11 +14,6 @@ export const StyledHeader = styled.header`
   height: auto;
   box-shadow: 0px 0px 3px 2px #e0e0e0;
   width: 100%;
-
-  @media (max-width: ${mobileBP}px) {
-    /* padding: 8px; */
-    height: 160px;
-  }
 `;
 
 export const Wrapper = styled.div`
@@ -31,7 +26,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: ${mobileBP}px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 45px 30px;
+    grid-template-rows: 40px 40px 30px;
     align-items: center;
     grid-gap: 6px;
   }
