@@ -1,16 +1,14 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const StyledFooter = styled.footer`
   background: ${({ theme }) => theme.colors.cornflowerBlue};
   color: ${({ theme }) => theme.colors.alabaster};
-  display: grid;
-  justify-content: center;
-  padding: 12px;
-  font-size: 14px;
-  /* box-shadow: 0px 0px 3px 2px #e0e0e0; */
-  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  width: 100%; 
 
   @media (max-width: ${mobileBP}px) {
     padding: 8px;
@@ -18,11 +16,27 @@ export const StyledFooter = styled.footer`
   }
 `;
 
+export const FooterWrapper = styled.div`
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto;
+  font-size: 14px;
+  width: 100%; 
+
+
+  @media (max-width: ${mobileBP}px) {
+
+  }
+`;
+
 export const FooterSection = styled.div`
   display: grid;
-  justify-content: center;
   align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  margin: auto;
   padding: 10px;
+  width: 100%;
 
   :not(:first-child) {
     border-top: 1px solid ${({ theme }) => theme.colors.alabaster};
@@ -33,41 +47,42 @@ export const FooterSection = styled.div`
   }
 `;
 
+// Footer Part 1
+
 export const FooterIcon = styled.img`
   margin: 20px;
   width: 150px;
 
   @media (max-width: ${mobileBP}px) {
-    margin: 10px;
+    margin: 0;
     width: 50px;
   }
 `;
 
 export const NewsletterWrapper = styled.div`
+    max-width: 1368px;
     display: grid;
     grid-template-columns: 180px 1fr 2fr;
     grid-gap: 20px;
     justify-content: center;
     align-items: center;
 
-
-
   @media (max-width: ${mobileBP}px) {
-    grid-template-columns: 75px 1fr;
+    grid-template-columns: 60px 1fr;
+    grid-gap: 10px;
 
   }
 `;
-
-
-
-
-
 
 export const InputWrapper = styled.div`
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 5px;
+
+  @media (max-width: ${mobileBP}px) {
+    grid-column-end: span 2;
+  }
 `;
 
 export const Input = styled.input`
@@ -85,10 +100,6 @@ export const Input = styled.input`
   &:focus {
     outline: none;
   }
-
-  @media (max-width: ${mobileBP}px) {
-    width: 275px;
-  }
 `;
 
 export const InputButton = styled.span`
@@ -99,7 +110,76 @@ export const InputButton = styled.span`
   border-radius: 5px;
 
   @media (max-width: ${mobileBP}px) {
-  /* width: 17px;
-  height: 17px; */
+    padding: 6px;
   }
+`;
+
+// Footer Part 2
+
+export const FooterInfo = styled.div`
+  max-width: 1368px;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: start;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+
+  @media (max-width: ${mobileBP}px) {
+
+  }
+`;
+
+export const FooterInfoElement = styled.div`
+  display: grid;
+  justify-content: center;
+
+  @media (max-width: ${mobileBP}px) {
+
+  }
+`;
+
+export const FooterInfoTitle = styled.h4`
+  font-size: 20px;
+  margin: 10px 0;
+
+  @media (max-width: ${mobileBP}px) {
+
+  }
+`;
+
+export const FooterInfoContent = styled.div`
+  line-height: 1.5;
+  padding: 12px 0;
+  font-size: 16px;
+  @media (max-width: ${mobileBP}px) {
+
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.alabaster};
+  display: grid;
+  padding: 6px 0;
+
+  transition: color 0.2s;
+  &:hover {
+    color: ${({ theme }) => theme.colors.mineShaft};
+  }
+
+  @media (max-width: ${mobileBP}px) {
+
+  }
+
+  ${({contactInfo}) =>
+    contactInfo &&
+    css`
+      margin-top: 10px;
+      @media (max-width: ${mobileBP}px) {
+    
+      }
+    `}
 `;
