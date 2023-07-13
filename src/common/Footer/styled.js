@@ -128,7 +128,8 @@ export const FooterInfo = styled.div`
 
 
   @media (max-width: ${mobileBP}px) {
-
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 28px;
   }
 `;
 
@@ -137,7 +138,7 @@ export const FooterInfoElement = styled.div`
   justify-content: center;
 
   @media (max-width: ${mobileBP}px) {
-
+    justify-content: start;
   }
 `;
 
@@ -146,7 +147,8 @@ export const FooterInfoTitle = styled.h4`
   margin: 10px 0;
 
   @media (max-width: ${mobileBP}px) {
-
+    font-size: 18px;
+    margin: 6px 0;
   }
 `;
 
@@ -154,8 +156,10 @@ export const FooterInfoContent = styled.div`
   line-height: 1.5;
   padding: 12px 0;
   font-size: 16px;
-  @media (max-width: ${mobileBP}px) {
 
+  @media (max-width: ${mobileBP}px) {
+    font-size: 14px;
+    padding: 0;
   }
 `;
 
@@ -171,15 +175,16 @@ export const StyledLink = styled(Link)`
   }
 
   @media (max-width: ${mobileBP}px) {
-
+    padding: 4px 0;
   }
 
   ${({contactInfo}) =>
     contactInfo &&
     css`
       margin-top: 10px;
+
       @media (max-width: ${mobileBP}px) {
-    
+        margin-top: 0;
       }
     `}
 `;
