@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
+import { ReactComponent as PreviousIcon} from "./images/previousIcon.svg";
+import { ReactComponent as NextIcon} from "./images/nextIcon.svg";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
@@ -74,4 +76,22 @@ export const BannerLink = styled(Link)`
     font-size: 10px;
     padding: 6px 15px;
   }
+`;
+
+export const StyledIconPrevious = styled(PreviousIcon)`
+  width: 100px;
+  height: 50px;
+  align-self: center;
+  justify-self: start;
+  cursor: pointer;
+  padding-left: 20px;
+`;
+
+export const StyledIconNext = styled(NextIcon)`
+  width: 100px;
+  height: 50px;
+  align-self: center;
+  justify-self: end;
+  cursor: pointer;
+  padding-right: 20px;
 `;

@@ -1,37 +1,34 @@
-
-import mainBanner from "./images/BestSellingCrime.jpg";
-import { BannerLink, MainBannerContent, MainBannerWrapper, Poster, SmallBannerContent, Wrapper } from "./styled";
+import { useState } from "react";
+import firstBanner from "./images/BestSellingCrime.jpg";
+import secondBanner from "./images/SummerRead.png";
+import { BannerLink, MainBannerContent, MainBannerWrapper, Poster, StyledIconNext, StyledIconPrevious, Wrapper } from "./styled";
 
 const MainBanner = () => {
+  const [mainBanner, setMainBanner] = useState(false);
 
-	return (
-		<>
-			<section className="home-wrapper-1 py-5">
-				<div className="container-xxl">
-					<div className="row">
-						<MainBannerWrapper>
-							{/* <div className="col-6"> */}
-							<Wrapper>
-								{/* <div className="main-banner-content position-relative p-3"> */}
-								<Poster
-									src={mainBanner}
-									className="img-fluid rounded-3"
-									alt="main banner"
-								/>
-								<MainBannerContent>
-									{/* <div className="main-banner-content position-absolute"> */}
-									<BannerLink>BUY NOW</BannerLink>
-									{/* </div> */}
-								</MainBannerContent>
-								{/* </div> */}
-							</Wrapper>
-							{/* </div> */}
-						</MainBannerWrapper>
-					</div>
-				</div>
-			</section>
-		</>
-	);
+  const handleNextClick = () => {
+    setMainBanner(!mainBanner);
+  };
+
+  return (
+    <>
+      <MainBannerWrapper>
+        <Wrapper>
+          <Poster
+            src={mainBanner ? secondBanner : firstBanner}
+            className="img-fluid rounded-3"
+            alt="main banner"
+            second={mainBanner}
+          />
+          <MainBannerContent>
+            <BannerLink>BUY NOW</BannerLink>
+          </MainBannerContent>
+        </Wrapper>
+        <StyledIconPrevious onClick={() => setMainBanner(!mainBanner)} />
+        <StyledIconNext onClick={handleNextClick} />
+      </MainBannerWrapper>
+    </>
+  );
 };
 
 export default MainBanner;
