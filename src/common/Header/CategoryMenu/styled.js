@@ -8,6 +8,7 @@ export const StyledMenu = styled.nav`
   margin: 0;
   display: flex;
   justify-content: center;
+  margin-bottom: 12px;
 `;
 
 export const MenuItem = styled.button`
