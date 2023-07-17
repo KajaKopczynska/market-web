@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.js": "/market-web/static/js/main.1dde0869.js",
+    "main.js": "/market-web/static/js/main.201eb5f5.js",
     "static/js/988.2c35179d.chunk.js": "/market-web/static/js/988.2c35179d.chunk.js",
+    "static/media/SummerRead.png": "/market-web/static/media/SummerRead.112630b5638c3f4d4556.png",
     "static/media/BestSellingCrime.jpg": "/market-web/static/media/BestSellingCrime.2f228bec12689dbb10a1.jpg",
     "static/media/PlaneIcon.svg": "/market-web/static/media/PlaneIcon.47feae5710830afb1fc0acc1e06a5ad3.svg",
     "static/media/BasketIcon.svg": "/market-web/static/media/BasketIcon.bfc30d62a495bedcd7cecbf6ed8acab3.svg",
-    "static/media/BookIcon.svg": "/market-web/static/media/BookIcon.b9fdb79522fbe261f2595146713847fe.svg",
+    "static/media/BookIcon.svg": "/market-web/static/media/BookIcon.afddc7289e64a9f69b96499264e9eb13.svg",
     "static/media/UserAccountIcon.svg": "/market-web/static/media/UserAccountIcon.047fd0b38a7d89808ae838a919640e41.svg",
     "static/media/ClipboardIcon.svg": "/market-web/static/media/ClipboardIcon.b164565681c59f3fde2a95f74593a547.svg",
-    "static/media/SearchIcon.svg": "/market-web/static/media/SearchIcon.c4379140ddbc4c774edeb5118b603a6b.svg",
     "index.html": "/market-web/index.html",
-    "main.1dde0869.js.map": "/market-web/static/js/main.1dde0869.js.map",
+    "static/media/SearchIcon.svg": "/market-web/static/media/SearchIcon.c4379140ddbc4c774edeb5118b603a6b.svg",
+    "static/media/nextIcon.svg": "/market-web/static/media/nextIcon.fc3316e70246d6597a46e6f2541b146d.svg",
+    "static/media/previousIcon.svg": "/market-web/static/media/previousIcon.08a0df46ef8c9eb3f4ff00a55b17a4cc.svg",
+    "main.201eb5f5.js.map": "/market-web/static/js/main.201eb5f5.js.map",
     "988.2c35179d.chunk.js.map": "/market-web/static/js/988.2c35179d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1dde0869.js"
+    "static/js/main.201eb5f5.js"
   ]
 }
