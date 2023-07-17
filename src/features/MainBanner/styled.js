@@ -28,10 +28,6 @@ export const MainBannerWrapper = styled.div`
   display: grid;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.alabaster};
-
-  @media (max-width: ${mobileBP}px) {
-
-}
 `;
 
 export const Wrapper = styled.div`
@@ -114,28 +110,29 @@ export const BannerLink = styled(Link)`
 `;
 
 export const IconWrapper = styled.div`
-    max-width: 1368px;
+  max-width: 1368px;
   width: 100%;
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-self: center;
   align-self: center;
-
-  @media (max-width: ${mobileBP}px) {
-
-  }
 `;
 
 export const StyledIconPrevious = styled(PreviousIcon)`
-  /* position: absolute; */
-  width: 100px;
+
   height: 50px;
   align-self: center;
   justify-self: start;
+  margin: 20px;
   cursor: pointer;
   opacity: 0.3;
   transition: opacity 0.5s;
+
+  @media (max-width: ${mobileBP}px) {
+    margin: 2px;
+    width: 20px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -143,14 +140,18 @@ export const StyledIconPrevious = styled(PreviousIcon)`
 `;
 
 export const StyledIconNext = styled(NextIcon)`
-  /* position: absolute; */
-  width: 100px;
   height: 50px;
   align-self: center;
   justify-self: end;
+  margin: 20px;
   cursor: pointer;
   opacity: 0.3;
   transition: opacity 0.5s;
+
+  @media (max-width: ${mobileBP}px) {
+    margin: 2px;
+    width: 20px;
+  }
 
   &:hover {
     opacity: 0.8;
