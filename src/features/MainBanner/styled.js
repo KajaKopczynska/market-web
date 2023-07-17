@@ -37,8 +37,9 @@ export const MainBannerWrapper = styled.div`
 export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.white};
   background: ${({ theme }) => theme.colors.black};
-  display: flex;
-  justify-content: center;
+  display: grid;
+  align-items: center;
+  justify-items: center;
   position: relative;
   max-width: 1368px;
   margin: 0 auto;
@@ -88,7 +89,6 @@ export const MainBannerContent = styled.div`
   }
 `;
 
-
 export const BannerLink = styled(Link)`
   color: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.white};
@@ -113,33 +113,46 @@ export const BannerLink = styled(Link)`
   }
 `;
 
-// export const IconWrapper = styled.div`
-//   position: relative;
-//   max-width: 1368px;
-//   margin: 0 auto;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   justify-content: space-between;
+export const IconWrapper = styled.div`
+    max-width: 1368px;
+  width: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: center;
+  align-self: center;
 
-//   @media (max-width: ${mobileBP}px) {
+  @media (max-width: ${mobileBP}px) {
 
-//   }
-// `;
+  }
+`;
 
 export const StyledIconPrevious = styled(PreviousIcon)`
-  position: absolute;
+  /* position: absolute; */
   width: 100px;
   height: 50px;
   align-self: center;
   justify-self: start;
   cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const StyledIconNext = styled(NextIcon)`
-  position: absolute;
+  /* position: absolute; */
   width: 100px;
   height: 50px;
   align-self: center;
   justify-self: end;
   cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;

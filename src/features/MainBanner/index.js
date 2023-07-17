@@ -24,10 +24,10 @@ const MainBanner = () => {
             <BannerLink>BUY NOW</BannerLink>
           </MainBannerContent> */}
 				</Wrapper>
-				{/* <IconWrapper> */}
+				<IconWrapper>
 					<StyledIconPrevious onClick={() => setMainBanner(!mainBanner)} />
 					<StyledIconNext onClick={handleNextClick} />
-				{/* </IconWrapper> */}
+				</IconWrapper>
 			</MainBannerWrapper>
 		</>
 	);
