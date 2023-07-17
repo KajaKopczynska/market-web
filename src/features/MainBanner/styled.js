@@ -1,7 +1,7 @@
 import styled, { keyframes, css } from "styled-components";
 import { Link, NavLink } from "react-router-dom";
-import { ReactComponent as PreviousIcon} from "./images/previousIcon.svg";
-import { ReactComponent as NextIcon} from "./images/nextIcon.svg";
+import { ReactComponent as PreviousIcon } from "./images/previousIcon.svg";
+import { ReactComponent as NextIcon } from "./images/nextIcon.svg";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
@@ -71,7 +71,7 @@ export const Poster = styled.img`
   animation-fill-mode: both;
   &.fade-in {
     opacity: 1;
-    animation: ${fadeInAnimation} 1s forwards;
+    animation: ${fadeInAnimation} 5s forwards;
   }
 `;
 

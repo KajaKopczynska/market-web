@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import firstBanner from "./images/BestSellingCrime.jpg";
 import secondBanner from "./images/SummerRead.png";
 import { BannerLink, IconWrapper, MainBannerContent, MainBannerWrapper, Poster, StyledIconNext, StyledIconPrevious, Wrapper } from "./styled";
@@ -9,6 +9,16 @@ const MainBanner = () => {
 	const handleNextClick = () => {
 		setMainBanner(!mainBanner);
 	};
+
+	const toggleBannerAutomatically = () => {
+		setMainBanner((prevMainBanner) => !prevMainBanner);
+	};
+
+	useEffect(() => {
+		const intervalId = setInterval(toggleBannerAutomatically, 8000);
+
+		return () => clearInterval(intervalId);
+	}, []);
 
 	return (
 		<>
