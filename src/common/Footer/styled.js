@@ -22,11 +22,6 @@ export const FooterWrapper = styled.div`
   grid-template-columns: auto;
   font-size: 14px;
   width: 100%; 
-
-
-  @media (max-width: ${mobileBP}px) {
-
-  }
 `;
 
 export const FooterSection = styled.div`
@@ -41,9 +36,9 @@ export const FooterSection = styled.div`
   :not(:first-child) {
     border-top: 1px solid ${({ theme }) => theme.colors.alabaster};
   }
+  
   @media (max-width: ${mobileBP}px) {
     padding: 6px;
-
   }
 `;
 
@@ -70,7 +65,6 @@ export const NewsletterWrapper = styled.div`
   @media (max-width: ${mobileBP}px) {
     grid-template-columns: 60px 1fr;
     grid-gap: 10px;
-
   }
 `;
 
@@ -108,6 +102,12 @@ export const InputButton = styled.span`
   background-color: ${({ theme }) => theme.colors.cornflowerBlue};
   margin: 5px;
   border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.cornflowerBlue};
+    background-color: ${({ theme }) => theme.colors.blizzardBlue};
+  }
 
   @media (max-width: ${mobileBP}px) {
     padding: 6px;
@@ -122,10 +122,8 @@ export const FooterInfo = styled.div`
   margin: auto;
   justify-content: space-between;
   align-items: start;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
 
   @media (max-width: ${mobileBP}px) {
     grid-template-columns: 1fr 1fr;
@@ -168,8 +166,8 @@ export const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.alabaster};
   display: grid;
   padding: 6px 0;
-
   transition: color 0.2s;
+
   &:hover {
     color: ${({ theme }) => theme.colors.mineShaft};
   }
