@@ -1,5 +1,5 @@
 import { UserWindow } from "../../../common/UserWindow";
-import { toCreateAccount } from "../../../root/routes";
+import { toCreateAccount } from "../../../routes";
 
 export const Login = () => {
   return (
@@ -8,7 +8,7 @@ export const Login = () => {
       password={"Password"}
       button={"Sign in"}
       nameLink={"Create account"}
-      navLink={toCreateAccount}
+      navLink={"/createAccount"}
     />
   );
 };

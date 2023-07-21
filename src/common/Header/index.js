@@ -1,4 +1,5 @@
 import { Search } from "../../features/Search";
+import { toCreateAccount } from "../../routes";
 import { CategoryMenu } from "./CategoryMenu";
 import { TopMenu } from "./TopMenu";
 import {
@@ -24,7 +25,7 @@ const Header = () => {
         <StyledHeader>
             <TopMenu></TopMenu>
             <Wrapper>
-                <TitleLink>
+                <TitleLink to="/">
                     <StyledBookIcon />
                     <TitleText>Book Shop</TitleText>
                 </TitleLink>
@@ -35,7 +36,7 @@ const Header = () => {
                     <nav>
                         <Navigation>
                             <li>
-                                <StyledNavLink>
+                                <StyledNavLink to="/login">
                                     <StyledUserAccountIcon />
                                     <NavLinkText>
                                         ACCOUNT
