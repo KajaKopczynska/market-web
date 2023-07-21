@@ -1,6 +1,7 @@
 import Footer from "../common/Footer";
 import HomeServicesBanner from "../features/HomeServicesBanner";
 import MainBanner from "../features/MainBanner";
+import { CreateAccount } from "../features/user/CreateAccound";
 
 const Home = () => {
 
@@ -8,6 +9,9 @@ const Home = () => {
         <>
             <MainBanner />
             <HomeServicesBanner />
+            <p></p>
+            <CreateAccount />
+
             <Footer />
         </>
     );
