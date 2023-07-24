@@ -4,7 +4,7 @@ import { UserWindow } from "../../../common/UserWindow";
 export const CreateAccount = () => (
   <UserWindow
     userName={"User Name"}
-    email={"e-mail"}
+    email={"E-mail"}
     password={"Password"}
     button={"Create"}
     createAccount

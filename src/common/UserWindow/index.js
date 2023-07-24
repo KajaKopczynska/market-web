@@ -5,16 +5,16 @@ export const UserWindow = ({
     password,
     button,
     paragraph,
-    nameLink,
-    navLink,
+    nameLink1,
+    navLink1,
+    nameLink2,
+    navLink2,
     email,
     createAccount,
 }) => {
     return (
         <UserForm>
             <InputName>{userName}</InputName>
-            <Input></Input>
-            <InputName>{password}</InputName>
             <Input></Input>
             {createAccount ? (
                 <>
@@ -24,10 +24,15 @@ export const UserWindow = ({
             ) : (
                 ""
             )}
+            <InputName>{password}</InputName>
+            <Input></Input>
+            <Paragraph>
+                <StyledNavLink to={navLink1}>{nameLink1}</StyledNavLink>
+            </Paragraph>
             <Button>{button}</Button>
             <Paragraph>
                 {paragraph}
-                <StyledNavLink to={navLink}>{nameLink}</StyledNavLink>
+                <StyledNavLink to={navLink2}>{nameLink2}</StyledNavLink>
             </Paragraph>
         </UserForm>
     );

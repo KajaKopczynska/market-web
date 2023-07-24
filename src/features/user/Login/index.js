@@ -1,14 +1,15 @@
 import { UserWindow } from "../../../common/UserWindow";
-import { toCreateAccount } from "../../../routes";
 
 export const Login = () => {
   return (
     <UserWindow
-      userName={"Login"}
+      userName={"Login/E-mail"}
       password={"Password"}
+      nameLink1={"Forgot your password?"}
+      navLink1={"/loginRecover"}
       button={"Sign in"}
-      nameLink={"Create account"}
-      navLink={"/createAccount"}
+      nameLink2={"Create account"}
+      navLink2={"/createAccount"}
     />
   );
 };
