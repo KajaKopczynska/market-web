@@ -6,32 +6,49 @@ const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 export const UserForm = styled.form`
   display: grid;
   justify-self: center;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr 1fr auto auto;
   grid-gap: 20px;
   max-width: 600px;
   max-height: 400px;
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding: 40px 40px 0 40px;
   margin: 0 auto;
   margin-top: 50px;
 `;
 
-export const InputName = styled.p``;
+export const FormTitle = styled.h1`
+  display: grid;
+  justify-items: center;
+  font-weight: normal;
+  color: ${({ theme }) => theme.colors.mineShaft};
+  margin: 0;
+`;
+
+export const InputWrapper = styled.div`
+  display: grid;
+  justify-items: center;
+  grid-gap: 20px;
+  width: 100%;
+`;
 
 export const Input = styled.input`
   border: 1px solid ${({ theme }) => theme.colors.silverChalice};
   border-radius: 5px;
-  max-height: 36px;
+  height: 36px;
+  width: 100%;
+  padding: 20px;
+  margin: 5px;
+  transition: box-shadow 0.2s ease;
 
+  &:hover {
+    box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.colors.silverChalice};
+  }
 `;
 
 export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.cornflowerBlue};
   color: ${({ theme }) => theme.colors.alabaster};
   cursor: pointer;
-  grid-column: 1 / 3;
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -50,15 +67,16 @@ export const Button = styled.button`
 `;
 
 export const Paragraph = styled.p`
-  grid-column: 1 / 3;
   justify-self: center;
   text-align: center;
 `;
 
 export const StyledNavLink = styled(NavLink)`
   cursor: pointer;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.cornflowerBlue};
 
   &:hover {
-
+    border-bottom: 1px solid ${({ theme }) => theme.colors.silverChalice};
   }
 `;
