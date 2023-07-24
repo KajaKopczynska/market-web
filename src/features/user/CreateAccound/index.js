@@ -6,6 +6,8 @@ export const CreateAccount = () => (
     userName={"User Name"}
     email={"E-mail"}
     password={"Password"}
+    nameLink1={"Already have an account? Sign in"}
+    navLink1={"/login"}
     button={"Create"}
     createAccount
   />
