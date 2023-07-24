@@ -11,9 +11,14 @@ export const UserForm = styled.form`
   max-height: 400px;
   width: 100%;
   height: 100%;
-  padding: 40px 40px 0 40px;
+  padding: 60px 40px 0 40px;
   margin: 0 auto;
-  margin-top: 50px;
+
+  @media (max-width: ${mobileBP}px) {
+    padding: 20px 15px 0 15px;
+    /* grid-template-rows: auto 1px; */
+    grid-gap: 6px;
+  }
 `;
 
 export const FormTitle = styled.h1`
@@ -22,12 +27,16 @@ export const FormTitle = styled.h1`
   font-weight: normal;
   color: ${({ theme }) => theme.colors.mineShaft};
   margin: 0;
+
+  @media (max-width: ${mobileBP}px) {
+    font-size: 22px;
+  }
 `;
 
 export const InputWrapper = styled.div`
   display: grid;
   justify-items: center;
-  grid-gap: 20px;
+  grid-gap: 6px;
   width: 100%;
 `;
 
@@ -69,6 +78,10 @@ export const Button = styled.button`
 export const Paragraph = styled.p`
   justify-self: center;
   text-align: center;
+
+  @media (max-width: ${mobileBP}px) {
+    font-size: 14px;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
