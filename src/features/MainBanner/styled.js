@@ -20,7 +20,7 @@ const fadeOutAnimation = keyframes`
   }
   to {
     opacity: 1;
-    display: none;
+    /* display: none; */
   }
 `;
 
@@ -32,7 +32,7 @@ export const MainBannerWrapper = styled.div`
 
 export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.white};
-  background: ${({ theme }) => theme.colors.black};
+  /* background: ${({ theme }) => theme.colors.black}; */
   display: grid;
   align-items: center;
   justify-items: center;
@@ -59,15 +59,15 @@ export const Poster = styled.img`
   animation: ${props =>
     props.second
       ? css`
-          ${fadeInAnimation} 1s forwards
+          ${fadeInAnimation} 2s forwards
         `
       : css`
-          ${fadeOutAnimation} 1s ease-in-out
+          ${fadeOutAnimation} 2s ease-in-out
         `};
   animation-fill-mode: both;
   &.fade-in {
     opacity: 1;
-    animation: ${fadeInAnimation} 5s forwards;
+    animation: ${fadeInAnimation} 8s forwards;
   }
 `;
 
