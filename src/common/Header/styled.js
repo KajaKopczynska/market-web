@@ -55,7 +55,6 @@ export const NavigationWrapper = styled.div`
     grid-row-start: 1;
     grid-column-start: 2;
     grid-gap: 20px;
-    /* justify-content: end; */
   }
 `;
 
@@ -82,7 +81,6 @@ export const CategoryMenuWrapper = styled.div`
 
 export const StyledBookIcon = styled(BookIcon)`
   flex-shrink: 0;
-  width: 50px;
   color: ${({ theme }) => theme.colors.cornflowerBlue};
 
   @media (max-width: ${mobileBP}px) {
