@@ -32,7 +32,6 @@ export const MainBannerWrapper = styled.div`
 
 export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.white};
-  /* background: ${({ theme }) => theme.colors.black}; */
   display: grid;
   align-items: center;
   justify-items: center;
@@ -65,6 +64,7 @@ export const Poster = styled.img`
           ${fadeOutAnimation} 2s ease-in-out
         `};
   animation-fill-mode: both;
+
   &.fade-in {
     opacity: 1;
     animation: ${fadeInAnimation} 8s forwards;
@@ -92,7 +92,6 @@ export const BannerLink = styled(Link)`
   display: grid;
   align-items: center;
   white-space: nowrap;
-
   font-size: 14px;
   padding: 13px 33px;
   border-radius: 25px;
@@ -130,8 +129,8 @@ export const StyledIconPrevious = styled(PreviousIcon)`
   transition: opacity 0.5s;
 
   @media (max-width: ${mobileBP}px) {
-    margin: 2px;
-    width: 20px;
+    margin: 4px;
+    height: 20px;
   }
 
   &:hover {
@@ -149,8 +148,8 @@ export const StyledIconNext = styled(NextIcon)`
   transition: opacity 0.5s;
 
   @media (max-width: ${mobileBP}px) {
-    margin: 2px;
-    width: 20px;
+    margin: 4px;
+    height: 20px;
   }
 
   &:hover {
