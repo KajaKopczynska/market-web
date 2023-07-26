@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Container } from "../../common/Container";
+import { SectionTitle} from "../../common/SectionTitle";
 import Category from "./Category";
-import { CategoryListWrapper, Title } from './styled';
-import { Container } from '../../common/Container';
+import { CategoryListWrapper } from "./styled";
 
 const CategoryList = ({ categories }) => {
 
 	return (
 		<>
 			<Container>
-				<Title>Popular Categories</Title>
+				<SectionTitle>Popular Categories</SectionTitle>
 				<CategoryListWrapper>
 					{categories.map(category => (
 						<Category

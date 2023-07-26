@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardWrapper, Image } from './styled';
 
-const Card = ({ imgSrc, children }) => {
+const CategoryCard = ({ imgSrc, children }) => {
 
     return (
             <CardWrapper>
@@ -14,4 +14,4 @@ const Card = ({ imgSrc, children }) => {
     );
 };
 
-export default Card;
+export default CategoryCard;
