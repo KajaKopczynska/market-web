@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Link, NavLink } from "react-router-dom";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
-export const Link = styled.a`
+export const CategoryLink = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   font-size: 22px;

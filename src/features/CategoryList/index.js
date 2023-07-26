@@ -15,7 +15,7 @@ const CategoryList = ({ categories }) => {
 							key={category.id}
 							imgSrc={category.image}
 							title={category.title}
-							link="#"
+							link={category.link}
 						/>
 					))}
 				</CategoryListWrapper>

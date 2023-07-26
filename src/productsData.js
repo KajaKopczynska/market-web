@@ -2,17 +2,20 @@ export const categories = [
     {
       id: 1,
       image: "https://i.ibb.co/cXvChqx/fiction.webp",
-      title: "FICTION BOOKS",
+      title: "Fiction Books",
+      link: "/books-fiction",
     },
     {
       id: 2,
       image: "https://i.ibb.co/5YkJRH7/non-Fiction.webp",
-      title: "NON FICTION BOOKS",
+      title: "Non Fiction Books",
+      link: "/books-nonfiction",
     },
     {
       id: 3,
       image: "https://i.ibb.co/tMf5k48/childrens-Books.webp",
-      title: "CHILDREN'S BOOKS",
+      title: "Children's Books",
+      link: "/books-childrens",
     },
   ];
 
