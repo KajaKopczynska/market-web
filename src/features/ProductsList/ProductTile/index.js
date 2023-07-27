@@ -29,7 +29,7 @@ const ProductTile = ({ link, imgSrc, price, title, author/*, onAddToCart, isInCa
 					):(  */}
                 <ProductButton /*onClick={onAddToCart}*/>
                     <ShoppingCart />
-                    <AdditionalText>Add To Bag</AdditionalText>
+                    <AdditionalText>Add To Basket</AdditionalText>
                 </ProductButton>
                 {/* )} */}
             </div>

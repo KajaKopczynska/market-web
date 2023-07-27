@@ -95,11 +95,15 @@ export const ProductLink = styled(Link)`
 export const ProductButton = styled.div`
   margin: 16px 0 0 0;
   padding: 6px;
-  transition: background-color 0.2s ease-in-out, color 0.5s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   display: grid;
   grid-template-columns: 30px auto;
   align-items: center;
   border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0px 2px 5px 2px #9aa6b8;
+  }
 
   ${TileWrapper}:hover & {
     background-color: ${({ theme }) => theme.colors.cornflowerBlue};
@@ -112,7 +116,7 @@ export const AdditionalText = styled.span`
   margin-left: 8px;
   opacity: 0;
   transform: scaleY(0);
-  transition: opacity 0.2s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
 
   ${TileWrapper}:hover & {
     opacity: 1;

@@ -8,7 +8,7 @@ export const SectionTitle = styled.h2`
   color: ${({ theme }) => theme.colors.doveGray};
   font-size: 35px;
   font-weight: normal;
-  margin: 50px 0 10px 0;
+  margin: 50px 0 30px 0;
 
   @media (max-width: ${mobileBP}px) {
     font-size: 26px;
