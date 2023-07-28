@@ -11,5 +11,6 @@ export const ProductListWrapper = styled.div`
 
   @media (max-width: ${mobileBP}px) {
     grid-template-columns: 1fr;
+    grid-gap: 20px;
   }
 `;

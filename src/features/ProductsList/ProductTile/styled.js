@@ -25,8 +25,10 @@ export const TileWrapper = styled(Link)`
   }
 
   @media (max-width: ${mobileBP}px) {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 1.5fr;
     padding: 12px;
+    grid-gap: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
   }
 `;
 
@@ -38,12 +40,29 @@ export const Image = styled.img`
   ${TileWrapper}:hover & {
     transform: scale(1.05);
   }
+
+  @media (max-width: ${mobileBP}px) {
+    /* width: 90%; */
+    /* padding: 5px; */
+  }
+`;
+
+export const TextWrapper = styled.div`
+  display: grid;
+
+  @media (max-width: ${mobileBP}px) {
+
+  }
 `;
 
 export const Informations = styled.div`
   display: grid;
   grid-gap: 16px;
   grid-template-rows: auto 1fr 1fr;
+
+  @media (max-width: ${mobileBP}px) {
+    /* grid-template-rows: auto auto auto; */
+  }
 `;
 
 export const Title = styled.h2`
@@ -70,7 +89,7 @@ export const Subtitle = styled.p`
 
   @media (max-width: ${mobileBP}px) {
     margin: 0 0 0 8px;
-    font-size: 12px;
+    font-size: 14px;
   }
 `;
 
@@ -82,7 +101,7 @@ export const Price = styled.p`
 
   @media (max-width: ${mobileBP}px) {
     margin: 0 0 0 8px;
-    font-size: 12px;
+    font-size: 16px;
   }
 `;
 
@@ -93,21 +112,32 @@ export const ProductLink = styled(Link)`
 `;
 
 export const ProductButton = styled.div`
-  margin: 16px 0 0 0;
-  padding: 6px;
+  margin: 12px 0 0 0;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   display: grid;
-  grid-template-columns: 30px auto;
+  grid-template-columns: 40px auto;
   align-items: center;
   border-radius: 5px;
+  height: 35px;
 
-  &:hover {
-    box-shadow: 0px 2px 5px 2px #9aa6b8;
-  }
-
-  ${TileWrapper}:hover & {
+ ${TileWrapper}:hover & {
     background-color: ${({ theme }) => theme.colors.cornflowerBlue};
     color: ${({ theme }) => theme.colors.alabaster};
+    box-shadow: 0px 0px 0px 5px ${({ theme }) => theme.colors.cornflowerBlue};
+  }
+
+  &:hover {
+    color: red;
+    background-color: red;
+    box-shadow: 0px 0px 0px 5px ${({ theme }) => theme.colors.cornflowerBlue};
+  }
+
+  @media (max-width: ${mobileBP}px) {
+    background-color: ${({ theme }) => theme.colors.cornflowerBlue};
+    color: ${({ theme }) => theme.colors.alabaster};
+    box-shadow: 0px 0px 0px 3px ${({ theme }) => theme.colors.cornflowerBlue};
+    height: 25px;
+    justify-items: center;
   }
 `;
 
@@ -121,6 +151,12 @@ export const AdditionalText = styled.span`
   ${TileWrapper}:hover & {
     opacity: 1;
     transform: scaleY(1);
+  }
+
+  @media (max-width: ${mobileBP}px) {
+  opacity: 1;
+  transform: scaleY(1);
+  font-size: 14px;
   }
 `;
 

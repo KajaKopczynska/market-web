@@ -4,7 +4,7 @@ import { ShoppingCart, Search, Check } from "react-feather"
 // import clsx from "clsx"
 
 import Card from "../../CategoryList/CategoryCard"; /*component to move*/
-import { AdditionalText, Image, Informations, Price, ProductButton, ProductLink, Subtitle, TileWrapper, Title } from './styled';
+import { AdditionalText, Image, Informations, Price, ProductButton, ProductLink, Subtitle, TextWrapper, TileWrapper, Title } from './styled';
 import ProductCard from '../ProductCard';
 
 const ProductTile = ({ link, imgSrc, price, title, author/*, onAddToCart, isInCart*/ }) => {
@@ -14,12 +14,12 @@ const ProductTile = ({ link, imgSrc, price, title, author/*, onAddToCart, isInCa
                 src={imgSrc}
                 alt=""
             />
-            <Informations>
-                <Title>{title}</Title>
-                <Subtitle>{author}</Subtitle>
-                <Price>${price}</Price>
-            </Informations>
-            <div>
+            <TextWrapper>
+                <Informations>
+                    <Title>{title}</Title>
+                    <Subtitle>{author}</Subtitle>
+                    <Price>${price}</Price>
+                </Informations>
                 {/* {isInCart ? (
 						<Link to="/cart">
 							<ProductButton>
@@ -32,7 +32,7 @@ const ProductTile = ({ link, imgSrc, price, title, author/*, onAddToCart, isInCa
                     <AdditionalText>Add To Basket</AdditionalText>
                 </ProductButton>
                 {/* )} */}
-            </div>
+            </TextWrapper>
 
         </TileWrapper>
     );
