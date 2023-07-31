@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from "../../common/Container";
 import { SectionTitle} from "../../common/SectionTitle";
-import Category from "./Category";
 import { CategoryListWrapper } from "./styled";
+import CategoryTile from './CategoryTile';
 
 const CategoryList = ({ categories }) => {
 
@@ -12,7 +12,7 @@ const CategoryList = ({ categories }) => {
 				<SectionTitle>Popular Categories</SectionTitle>
 				<CategoryListWrapper>
 					{categories.map(category => (
-						<Category
+						<CategoryTile
 							key={category.id}
 							imgSrc={category.image}
 							title={category.title}
