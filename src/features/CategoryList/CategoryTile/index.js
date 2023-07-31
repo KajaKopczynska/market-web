@@ -1,8 +1,7 @@
 import React from 'react';
 // import { Link } from "react-router-dom";
 
-import { CategoryLink, Image, TextWrapper, TileWrapper, Title } from './styled';
-import CategoryCard from '../CategoryCard';
+import { Image, TextWrapper, TileWrapper, Title } from './styled';
 
 const CategoryTile = ({ title, imgSrc, link }) => {
     return (

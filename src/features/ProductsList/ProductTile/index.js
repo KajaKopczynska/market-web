@@ -2,10 +2,7 @@ import React from 'react'
 // import { Link } from "react-router-dom"
 import { ShoppingCart, Search, Check } from "react-feather"
 // import clsx from "clsx"
-
-import Card from "../../CategoryList/CategoryCard"; /*component to move*/
 import { AdditionalText, Image, Informations, Price, ProductButton, ProductLink, Subtitle, TextWrapper, TileWrapper, Title } from './styled';
-import ProductCard from '../ProductCard';
 
 const ProductTile = ({ link, imgSrc, price, title, author/*, onAddToCart, isInCart*/ }) => {
     return (
