@@ -6,7 +6,8 @@ import { getProductById } from "./productsSlice";
 
 export const ProductPage = () => {
     const { id } = useParams();
-    const product = useSelector((state) => getProductById(state, id));
+    const productId = parseInt(id);
+    const product = useSelector((state) => getProductById(state, productId));
     console.log(product);
 
     if (!product) {
@@ -17,7 +18,7 @@ export const ProductPage = () => {
         <Container>
             <Title>{product.title}</Title>
             <p>{product.author}</p>
-            <p>{product.price}</p>
+            <p>${product.price}</p>
         </Container>
     );
 };
