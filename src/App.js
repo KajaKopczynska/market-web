@@ -5,6 +5,7 @@ import { CreateAccount } from "./features/user/CreateAccound";
 import { Login } from "./features/user/Login";
 import { LoginRecover } from "./features/user/LoginRecover";
 import Footer from "./common/Footer";
+import { ProductPage } from "./pages/ProductPage";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/books-fiction" element={<h1>Books Fiction Page</h1>} />
         <Route path="/books-nonfiction" element={<h1>Books Non Fiction Page</h1>} />
         <Route path="/books-childrens" element={<h1>Books Children's Page</h1>} />
+        <Route path="/products/:id" element={<ProductPage />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
