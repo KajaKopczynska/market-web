@@ -2,7 +2,9 @@ import React from 'react'
 // import { Link } from "react-router-dom"
 import { ShoppingCart, Search, Check } from "react-feather"
 // import clsx from "clsx"
-import { AdditionalText, Image, Informations, Price, ProductButton, ProductLink, Subtitle, TextWrapper, TileWrapper, Title } from './styled';
+import { AdditionalText, Image, Informations, Price, ProductLink, Subtitle, TextWrapper, TileWrapper, Title } from './styled';
+import ProductButton from '../../../common/ProductButton';
+
 
 const ProductTile = ({ link, imgSrc, price, title, author/*, onAddToCart, isInCart*/ }) => {
     return (
@@ -24,10 +26,7 @@ const ProductTile = ({ link, imgSrc, price, title, author/*, onAddToCart, isInCa
 							</ProductButton>
 						</Link>
 					):(  */}
-                <ProductButton /*onClick={onAddToCart}*/>
-                    <ShoppingCart />
-                    <AdditionalText>Add To Basket</AdditionalText>
-                </ProductButton>
+                <ProductButton /*onClick={onAddToCart}*/ />
                 {/* )} */}
             </TextWrapper>
 
