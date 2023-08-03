@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { TileWrapper } from "../../features/ProductsList/ProductTile/styled";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
@@ -24,6 +24,26 @@ export const ProductButtonWrapper = styled.div`
     box-shadow: 0px 0px 0px 5px ${({ theme }) => theme.colors.cornflowerBlue};
   }
 
+  ${({ productPage }) =>
+    productPage &&
+    css`
+      background-color: ${({ theme }) => theme.colors.cornflowerBlue};
+      color: ${({ theme }) => theme.colors.alabaster};
+      box-shadow: 0px 0px 0px 5px ${({ theme }) => theme.colors.cornflowerBlue};
+      margin-left: 6px;
+      width: 200px;
+
+      &:hover {
+        color: ${({ theme }) => theme.colors.doveGray};
+        background-color: ${({ theme }) => theme.colors.blizzardBlue};
+        box-shadow: 0px 0px 0px 5px ${({ theme }) => theme.colors.blizzardBlue};
+        cursor: pointer;
+
+      @media (max-width: ${mobileBP}px) {
+
+      }
+    `}
+
   @media (max-width: ${mobileBP}px) {
     background-color: ${({ theme }) => theme.colors.cornflowerBlue};
     color: ${({ theme }) => theme.colors.alabaster};
@@ -44,6 +64,16 @@ export const AdditionalText = styled.span`
     opacity: 1;
     transform: scaleY(1);
   }
+
+  ${({ productPage }) =>
+    productPage &&
+    css`
+      opacity: 1;
+      transform: scaleY(1);
+      @media (max-width: ${mobileBP}px) {
+
+      }
+    `}
 
   @media (max-width: ${mobileBP}px) {
   opacity: 1;

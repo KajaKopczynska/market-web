@@ -5,7 +5,7 @@ const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 export const QuantityContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 `;
 
 export const QuantityLabel = styled.label`

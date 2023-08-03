@@ -55,7 +55,7 @@ export const ProductPage = () => {
                         </Details>
                         {product.price && <Price>${product.price}</Price>}
                         <QuantitySelector quantity={quantity} onQuantityChange={handleQuantityChange} />
-                        <ProductButton /*onClick={onAddToCart}*/ />
+                        <ProductButton productPage /*onClick={onAddToCart}*/ />
                     </Information>
                 </div>
                 {product.summary && (

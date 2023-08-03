@@ -1,12 +1,12 @@
 import { ShoppingCart } from "react-feather"
 import { AdditionalText, ProductButtonWrapper } from "./styled";
 
-const ProductButton = () => {
+const ProductButton = ({productPage}) => {
 
     return (
-        <ProductButtonWrapper /*onClick={onAddToCart}*/>
+        <ProductButtonWrapper productPage /*onClick={onAddToCart}*/>
             <ShoppingCart />
-            <AdditionalText>Add To Cart</AdditionalText>
+            <AdditionalText productPage>Add To Cart</AdditionalText>
         </ProductButtonWrapper>
     );
 };
