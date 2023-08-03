@@ -26,6 +26,10 @@ export const products = [
     title: "The Lord of the Rings: The Fellowship of the Ring",
     author: "J. R. R. Tolkien",
     price: 14,
+    pages: 432,
+    binding: "Hardback/Paperback",
+    published: "18.08.2012",
+    summary: "Special unjacketed hardback edition of the first part of J.R.R. Tolkien's epic masterpiece, The Lord of the Rings. This edition features the complete story with a unique cover design embellished with gold foil and the iconic maps of Middle-earth appearing in red and black as endpapers. Sauron, the Dark Lord, has gathered to him all the Rings of Power - the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring - the ring that rules them all - which has fallen into the hands of the hobbit, Bilbo Baggins. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.",
     extra: "Best Selling Books",
   },
   {
