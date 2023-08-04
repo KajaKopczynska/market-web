@@ -25,9 +25,9 @@ export const TileWrapper = styled(Link)`
   }
 
   @media (max-width: ${mobileBP}px) {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1.5fr 2fr;
     padding: 12px;
-    grid-gap: 10px;
+    grid-column-gap: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
   }
 `;
@@ -42,8 +42,7 @@ export const Image = styled.img`
   }
 
   @media (max-width: ${mobileBP}px) {
-    /* width: 90%; */
-    /* padding: 5px; */
+    /* height: 100%; */
   }
 `;
 
