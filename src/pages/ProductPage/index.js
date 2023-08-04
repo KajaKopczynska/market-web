@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Container } from "../../common/Container";
-import { Details, Image, Information, Label, Price, ProductPageWrapper, Subtitle, Summary, SummaryLabel, SummaryTitle, Title } from "./styled";
+import { Details, Image, Info1, Info2, Label, Price, ProductPageWrapper, Subtitle, Summary, SummaryTitle, Title } from "./styled";
 import { getProductById } from "./productsSlice";
 import ProductButton from "../../common/ProductButton";
 import QuantitySelector from "./QuantitySelector";
@@ -29,35 +29,35 @@ export const ProductPage = () => {
         <Container>
             <ProductPageWrapper>
                 <Image src={product.image} alt="" />
-                <div>
-                    <Information>
-                        {product.title && <Title>{product.title}</Title>}
-                        {product.author && <Subtitle>{product.author}</Subtitle>}
-                        <Details>
-                            {product.published && (
-                                <div>
-                                    <Label>Published:</Label>
-                                    {product.published}
-                                </div>
-                            )}
-                            {product.pages && (
-                                <div>
-                                    <Label>Pages:</Label>
-                                    {product.pages}
-                                </div>
-                            )}
-                            {product.binding && (
-                                <div>
-                                    <Label>Binding:</Label>
-                                    {product.binding}
-                                </div>
-                            )}
-                        </Details>
-                        {product.price && <Price>${product.price}</Price>}
-                        <QuantitySelector quantity={quantity} onQuantityChange={handleQuantityChange} />
-                        <ProductButton productPage /*onClick={onAddToCart}*/ />
-                    </Information>
-                </div>
+                <Info1>
+                    {product.title && <Title>{product.title}</Title>}
+                    {product.author && <Subtitle>{product.author}</Subtitle>}
+                    <Details>
+                        {product.published && (
+                            <div>
+                                <Label>Published:</Label>
+                                {product.published}
+                            </div>
+                        )}
+                        {product.pages && (
+                            <div>
+                                <Label>Pages:</Label>
+                                {product.pages}
+                            </div>
+                        )}
+                        {product.binding && (
+                            <div>
+                                <Label>Binding:</Label>
+                                {product.binding}
+                            </div>
+                        )}
+                    </Details>
+                </Info1>
+                <Info2>
+                    {product.price && <Price>${product.price}</Price>}
+                    <QuantitySelector quantity={quantity} onQuantityChange={handleQuantityChange} />
+                    <ProductButton productPage /*onClick={onAddToCart}*/ />
+                </Info2>
                 {product.summary && (
                     <Summary>
                         <SummaryTitle>Summary</SummaryTitle>
