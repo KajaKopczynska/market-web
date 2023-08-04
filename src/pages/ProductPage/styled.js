@@ -50,7 +50,7 @@ export const Image = styled.img`
 
 export const Info1 = styled.div`
   display: grid;
-  grid-template-rows: 70px auto auto;
+  grid-template-rows: auto auto auto;
   grid-area: in1;
   
   @media (max-width: ${mobileBP}px) {
@@ -123,7 +123,7 @@ export const Price = styled.div`
 
   @media (max-width: ${mobileBP}px) {
     font-size: 20px;
-    margin: 10px 0 10px 0;
+    margin: 15px 0 10px 0;
   }
 `;
 
