@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/market-web/static/js/main.59216adf.js",
+    "main.js": "/market-web/static/js/main.968c7b2b.js",
     "static/js/988.2c35179d.chunk.js": "/market-web/static/js/988.2c35179d.chunk.js",
     "static/media/SummerRead.png": "/market-web/static/media/SummerRead.112630b5638c3f4d4556.png",
     "static/media/BestSellingCrime.jpg": "/market-web/static/media/BestSellingCrime.2f228bec12689dbb10a1.jpg",
@@ -13,10 +13,10 @@
     "static/media/SearchIcon.svg": "/market-web/static/media/SearchIcon.c4379140ddbc4c774edeb5118b603a6b.svg",
     "static/media/nextIcon.svg": "/market-web/static/media/nextIcon.fc3316e70246d6597a46e6f2541b146d.svg",
     "static/media/previousIcon.svg": "/market-web/static/media/previousIcon.08a0df46ef8c9eb3f4ff00a55b17a4cc.svg",
-    "main.59216adf.js.map": "/market-web/static/js/main.59216adf.js.map",
+    "main.968c7b2b.js.map": "/market-web/static/js/main.968c7b2b.js.map",
     "988.2c35179d.chunk.js.map": "/market-web/static/js/988.2c35179d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.59216adf.js"
+    "static/js/main.968c7b2b.js"
   ]
 }
