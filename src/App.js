@@ -6,6 +6,8 @@ import { Login } from "./features/user/Login";
 import { LoginRecover } from "./features/user/LoginRecover";
 import Footer from "./common/Footer";
 import { ProductPage } from "./pages/ProductPage";
+import ProductListByGenre from "./features/ProductsList/ProductListByGenre";
+import { products } from "./productsData"; // Import danych produktów
 
 function App() {
 
@@ -16,9 +18,9 @@ function App() {
         <Route path="/register" element={<CreateAccount />} />
         <Route path="/login-recover" element={<LoginRecover />}/>
         <Route path="/login" element={<Login />} />
-        <Route path="/books-fiction" element={<h1>Books Fiction Page</h1>} />
-        <Route path="/books-nonfiction" element={<h1>Books Non Fiction Page</h1>} />
-        <Route path="/books-childrens" element={<h1>Books Children's Page</h1>} />
+        <Route path="/books-fiction" element={<ProductListByGenre products={products} genre="fiction" />} />
+        <Route path="/books-nonfiction" element={<ProductListByGenre products={products} genre="nonfiction" />} />
+        <Route path="/books-childrens" element={<ProductListByGenre products={products} genre="childrens" />} />
         <Route path="/products/:id" element={<ProductPage />} />
         <Route path="/" element={<Home />} />
       </Routes>

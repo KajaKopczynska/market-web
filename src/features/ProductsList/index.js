@@ -5,7 +5,7 @@ import { ProductListWrapper } from './styled';
 import ProductTile from './ProductTile';
 // import { CartContext } from "@/App"
 
-const ProductList = ({ products, products2 }) => {
+const ProductList = ({ products }) => {
     // const { cart } = useContext(CartContext)
 
     const bestProducts = products.filter((product) => product.extra === "Best Selling Books");
@@ -31,7 +31,7 @@ const ProductList = ({ products, products2 }) => {
                 </ProductListWrapper>
                 <SectionTitle>What Everyone's Talking About</SectionTitle>
                 <ProductListWrapper>
-                {popularProducts.map(product => (
+                    {popularProducts.map(product => (
                         <ProductTile
                             key={product.id}
                             imgSrc={product.image}
