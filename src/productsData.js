@@ -22,6 +22,7 @@ export const categories = [
 export const products = [
   {
     id: 1,
+    type: "book",
     image: "https://i.ibb.co/qnxfpJx/lotr.jpg",
     title: "The Lord of the Rings: The Fellowship of the Ring",
     author: "J. R. R. Tolkien",
@@ -35,6 +36,7 @@ export const products = [
   },
   {
     id: 2,
+    type: "book",
     image: "https://i.ibb.co/D5JbFS5/witcher.jpg",
     title: "The Witcher: The Last Wish",
     author: "Andrzej Sapkowski",
@@ -48,6 +50,7 @@ export const products = [
   },
   {
     id: 3,
+    type: "book",
     image: "https://i.ibb.co/xf7SxNw/got.jpg",
     title: "A Game of Thrones",
     author: "George R. R. Martin",
@@ -61,6 +64,7 @@ export const products = [
   },
   {
     id: 4,
+    type: "book",
     image: "https://i.ibb.co/LCfC9g2/babel.jpg",
     title: "Babel: An Arcane History",
     author: "R.F. Kuang",
@@ -74,6 +78,7 @@ export const products = [
   },
   {
     id: 5,
+    type: "book",
     image: "https://i.ibb.co/cTCK1tc/tudor.jpg",
     title: "House of Tudor: A Grisly History",
     author: "Mickey Mayhew",
@@ -87,6 +92,7 @@ export const products = [
   },
   {
     id: 6,
+    type: "book",
     image: "https://i.ibb.co/dW6T011/phillars.jpg",
     title: "The Pillars of the Earth",
     author: "Ken Follett",
@@ -100,6 +106,7 @@ export const products = [
   },
   {
     id: 7,
+    type: "book",
     image: "https://i.ibb.co/Z1HNZ5W/court.jpg",
     title: "A Court of Mist and Fury",
     author: "Sarah J. Maas",
@@ -113,6 +120,7 @@ export const products = [
   },
   {
     id: 8,
+    type: "book",
     image: "https://i.ibb.co/nDWMHH6/harry.jpg",
     title: "Harry Potter and the Philosopher’s Stone",
     author: "J. K. Rowling",
@@ -126,6 +134,7 @@ export const products = [
   },
   {
     id: 9,
+    type: "book",
     image: "https://i.ibb.co/Tmtbzxt/history.jpg",
     title: "The Times Complete History of the World",
     author: "Richard Overy",
@@ -139,6 +148,7 @@ export const products = [
   },
   {
     id: 10,
+    type: "book",
     image: "https://i.ibb.co/RP5ZryF/9781472157362.jpg",
     title: "Where the Crawdads Sing",
     author: "Delia Owens",
@@ -152,6 +162,7 @@ export const products = [
   },
   {
     id: 11,
+    type: "book",
     image: "https://i.ibb.co/M2J2cDH/9781510105263-04124cdb-8f13-46e0-a591-c5215d34a77e.jpg",
     title: "Siege and Storm: Book 2 (Shadow and Bone)",
     author: "Leigh Bardugo",
@@ -165,6 +176,7 @@ export const products = [
   },
   {
     id: 12,
+    type: "book",
     image: "https://i.ibb.co/LNvfm2W/9780241377093.jpg",
     title: "The Dark is Rising",
     author: "Susan Cooper",
@@ -178,6 +190,7 @@ export const products = [
   },
   {
     id: 13,
+    type: "book",
     image: "https://i.ibb.co/2WRbBG9/peoplehacker.jpg",
     title: "People Hacker",
     author: "Jenny Radcliffe",
@@ -191,6 +204,7 @@ export const products = [
   },
   {
     id: 14,
+    type: "book",
     image: "https://i.ibb.co/7yMkn4n/9780712354073.jpg",
     title: "Final Acts: Theatrical Mysteries",
     author: "Martin Edwards",
@@ -204,6 +218,7 @@ export const products = [
   },
   {
     id: 15,
+    type: "book",
     image: "https://i.ibb.co/JzwjsVV/9780367568948-fa14c0b5-38fd-4b1d-bb7b-a29a0c3e186e.jpg",
     title: "Icons of Sound: Voice, Architecture, and Imagination in Medieval Art",
     author: "Bissera V. Pentcheva",
@@ -214,5 +229,35 @@ export const products = [
     published: "30.05.2022",
     summary: "Icons of Sound: Voice, Architecture, and Imagination in Medieval Art brings together art history and sound studies to offer new perspectives on medieval churches and cathedrals as spaces where the perception of the visual is inherently shaped by sound. The chapters encompass a wide geographic and historical range, from the fifth to the fifteenth century, and from Armenia and Byzantium to Venice, Rome, and Santiago de Compostela. Contributors offer nuanced explorations of the intangible sonic aura produced in these places by the ritual music and harness the use of digital technology to reconstruct historical aural environments. Rooted in a decade-long interdisciplinary research project at Stanford University, Icons of Sound expands our understanding of the inherently intertwined relationship between medieval chant and liturgy, the acoustics of architectural spaces, and their visual aesthetics. Together, the contributors provide insights that are relevant across art history, sound studies, musicology, and medieval studies.",
     extra: "What Everyone's Talking About",
+  },
+  {
+    id: 16,
+    type: "audiobook",
+    image: "https://i.ibb.co/QKdh54k/9781602837157.jpg",
+    title: "Sherlock Holmes: Three Tales of Avarice (CD-Audio)",
+    author: "Sir Arthur Conan Doyle",
+    readBy: "Edward Hardwicke",
+    price: 21,
+    pages: false,
+    genre: "fiction",
+    binding: false,
+    published: "05.04.20212",
+    summary: "Avarice gets top billing in 'The Adventure of the Priory School,' 'The Adventure of the Red-Headed League,' and 'The Adventure of the Blue Carbuncle,' three masterfully crafted cases from one of the greatest mystery writers of all, Sir Arthur Conan Doyle, and starring that most celebrated sleuth, Sherlock Holmes. In 'The Adventure of the Priory School,' a wicked scheme to kidnap a young lord results in a greater tragedy. In 'The Adventures of the Red-Headed League,' Holmes catches one of London's most daring criminals while investigating the strange business of the Red-Headed League. In 'The Adventure of the Blue Carbuncle,' an unusual sequence of events leads Holmes to discover the precious blue carbuncle of the Countess of Morcar.",
+    extra: false,
+  },
+  {
+    id: 17,
+    type: "audiobook",
+    image: "https://i.ibb.co/7QgqKwc/9781843790921.jpg",
+    title: "Chopin: His Life and Works (CD-Audio)",
+    author: "Jeremy Siepmann",
+    readBy: "Anton Lesser",
+    price: 20,
+    pages: false,
+    genre: "nonfiction",
+    binding: false,
+    published: "01.04.2002",
+    summary: "Fryderyk Chopin is the pianist composer par excellence. Regarded as one of the most mesmeric performers of his day, he lives on in his music – his waltzes, mazurkas, études, preludes, nocturnes, three piano sonatas, two piano concertos and much more. Here, his life, from his birth in Poland, his famous affair with the French writer George Sand, and his death at the age of 49 in Paris, is told with his music featuring prominently.",
+    extra: false,
   },
 ];
