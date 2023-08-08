@@ -1,5 +1,4 @@
 import { Search } from "../../features/Search";
-import { toCreateAccount } from "../../routes";
 import { CategoryMenu } from "./CategoryMenu";
 import { TopMenu } from "./TopMenu";
 import {
