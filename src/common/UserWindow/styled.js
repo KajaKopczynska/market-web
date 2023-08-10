@@ -8,10 +8,8 @@ export const UserForm = styled.form`
   justify-self: center;
   grid-gap: 20px;
   max-width: 600px;
-  max-height: 400px;
   width: 100%;
-  height: 100%;
-  padding: 60px 40px 0 40px;
+  padding: 60px 40px 100px 40px;
   margin: 0 auto;
 
   @media (max-width: ${mobileBP}px) {
