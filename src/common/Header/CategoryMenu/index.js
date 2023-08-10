@@ -9,10 +9,10 @@ export const CategoryMenu = () => (
       <StyledNavLink to="/audiobooks">Audiobooks</StyledNavLink>
     </MenuItem>
     <MenuItem>
-      <StyledNavLink to="/music">Music</StyledNavLink>
+      <StyledNavLink to="/cooming-soon">Music</StyledNavLink>
     </MenuItem>
     <MenuItem>
-      <StyledNavLink to="/games">Games</StyledNavLink>
+      <StyledNavLink to="/cooming-soon">Games</StyledNavLink>
     </MenuItem>
   </StyledMenu>
 );

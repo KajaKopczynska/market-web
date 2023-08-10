@@ -9,6 +9,7 @@ import { ProductPage } from "./pages/ProductPage";
 import ProductListByGenre from "./features/ProductsList/ProductListByGenre";
 import { products } from "./productsData";
 import ProductListByType from "./features/ProductsList/ProductListByType";
+import UnderConstruction from "./pages/UnderConstruction";
 
 function App() {
 
@@ -24,8 +25,8 @@ function App() {
         <Route path="/books-childrens" element={<ProductListByGenre products={products} genre="childrens" />} />
         <Route path="/books" element={<ProductListByType products={products} type="book" />} />
         <Route path="/audiobooks" element={<ProductListByType products={products} type="audiobook" />} />
-        <Route path="/music" element={<h1>Cooming Soon</h1>} />
-        <Route path="/games" element={<h1>Cooming Soon</h1>} />
+        <Route path="/cooming-soon" element={<UnderConstruction />} />
+        <Route path="/cooming-soon" element={<UnderConstruction />} />
         <Route path="/products/:id" element={<ProductPage />} />
         <Route path="/" element={<Home />} />
       </Routes>
