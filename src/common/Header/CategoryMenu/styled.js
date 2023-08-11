@@ -8,7 +8,7 @@ export const StyledMenu = styled.nav`
   margin: 0;
   display: flex;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 `;
 
 export const MenuItem = styled.button`
@@ -31,8 +31,13 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   padding: 8px 8px 2px 8px;
   position: relative;
+  font-weight: 400;
 
   &:hover {
+    color: ${({ theme }) => theme.colors.cornflowerBlue};
+  }
+
+  &.active {
     color: ${({ theme }) => theme.colors.cornflowerBlue};
   }
 
