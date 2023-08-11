@@ -7,12 +7,11 @@ export const useReplaceQueryParameter = () => {
 
     return ({ value }) => {
         const searchParams = new URLSearchParams();
-
         if (value === "") {
             searchParams.delete(searchQueryParamName);
         } else {
             searchParams.set(searchQueryParamName, value);
         }
-        navigate(`${location.pathname}?${searchParams.toString()}`);
+        navigate(`${location.pathname}${searchParams.toString() ? '?' + searchParams.toString() : ''}`);
     };
 };

@@ -1,28 +1,34 @@
+import { useDispatch, useSelector } from "react-redux";
 import useQueryParameter, { searchQueryParamName } from "../../useQueryParameter";
 import { useReplaceQueryParameter } from "../../useReplaceQueryParameter";
 import { SearchIcon, SearchInput, SearchWrapper } from "./styled";
+import { fetchSearchLoading, selectSearchQuery } from "./searchSlice";
+import React from "react";
 
 export const Search = () => {
-
-    const query = useQueryParameter(searchQueryParamName);
+    const dispatch = useDispatch();
+    const query = useSelector(selectSearchQuery);
     const replaceQueryParameter = useReplaceQueryParameter();
 
-    const oninputChange = ({ target }) => {
-        replaceQueryParameter([
-            {
-                key: searchQueryParamName,
-                value: target.value.trim() !== "" ? target.value : undefined,
-            },
-        ]);
+    const onInputChange = (event) => {
+        const newQuery = event.target.value.trim() !== "" ? event.target.value : "";
+        replaceQueryParameter({ value: newQuery });
+        dispatch(fetchSearchLoading({ query: newQuery || undefined })); // Zachowaj dotychczasową logikę, ale przekaż `undefined` tylko wtedy, gdy `newQuery` jest pusty
     };
+
+    React.useEffect(() => {
+        if (query) {
+            dispatch(fetchSearchLoading({ query }));
+        }
+    }, [query, dispatch]);
 
     return (
         <>
             <SearchWrapper>
                 <SearchInput
-                    placeholder={`Search by Title, ISBN or Keyword`}
+                    placeholder={`Search by Title or Author`}
                     value={query || ""}
-                    onChange={oninputChange}
+                    onChange={onInputChange}
                 />
                 <SearchIcon />
             </SearchWrapper>
