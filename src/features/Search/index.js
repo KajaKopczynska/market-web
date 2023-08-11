@@ -2,29 +2,33 @@ import { useDispatch, useSelector } from "react-redux";
 import useQueryParameter, { searchQueryParamName } from "../../useQueryParameter";
 import { useReplaceQueryParameter } from "../../useReplaceQueryParameter";
 import { SearchIcon, SearchInput, SearchWrapper } from "./styled";
-import { fetchSearchLoading, selectSearchQuery } from "./searchSlice";
+import { fetchSearchLoading, fetchSearchSuccess, selectSearchQuery } from "./searchSlice";
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 export const Search = () => {
     const dispatch = useDispatch();
-    const query = useSelector(selectSearchQuery);
+
+    const query = useQueryParameter(searchQueryParamName);
     const replaceQueryParameter = useReplaceQueryParameter();
 
-    const onInputChange = (event) => {
-        const newQuery = event.target.value.trim() !== "" ? event.target.value : "";
-        replaceQueryParameter({ value: newQuery });
-        dispatch(fetchSearchLoading({ query: newQuery || undefined })); // Zachowaj dotychczasową logikę, ale przekaż `undefined` tylko wtedy, gdy `newQuery` jest pusty
+    const onInputChange = ({ target }) => {
+
+        console.log("New query:", query);
+        replaceQueryParameter({
+            key: searchQueryParamName,
+            value: target.value.trim(),
+        });
     };
 
-    React.useEffect(() => {
-        if (query) {
-            dispatch(fetchSearchLoading({ query }));
-        }
-    }, [query, dispatch]);
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        dispatch(fetchSearchSuccess(query));
+    };
 
     return (
         <>
-            <SearchWrapper>
+            <SearchWrapper onSubmit={onFormSubmit}>
                 <SearchInput
                     placeholder={`Search by Title or Author`}
                     value={query || ""}

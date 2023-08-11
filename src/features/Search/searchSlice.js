@@ -16,7 +16,7 @@ const searchSlice = createSlice({
         },
         fetchSearchSuccess: (state, { payload: search }) => {
             state.status = "success";
-            state.movies = search.results;
+            state.products = search.results;
             state.totalResults = search.total_results;
         },
     },

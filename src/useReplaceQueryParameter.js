@@ -6,12 +6,12 @@ export const useReplaceQueryParameter = () => {
     const navigate = useNavigate();
 
     return ({ value }) => {
-        const searchParams = new URLSearchParams();
+        const searchParams = new URLSearchParams(location.search);
         if (value === "") {
             searchParams.delete(searchQueryParamName);
         } else {
             searchParams.set(searchQueryParamName, value);
         }
-        navigate(`${location.pathname}${searchParams.toString() ? '?' + searchParams.toString() : ''}`);
+        navigate(`${location.pathname}?${searchParams.toString()}`);
     };
 };
