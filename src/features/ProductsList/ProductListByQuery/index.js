@@ -3,8 +3,14 @@ import { Container } from '../../../common/Container';
 import { SectionTitle } from '../../../common/SectionTitle';
 import ProductTile from '../ProductTile';
 import { ProductListWrapper } from '../styled';
+import { selectSearchQuery } from '../../Search/searchSlice';
+import { useSelector } from 'react-redux';
+import { useSearchParams } from 'react-router-dom';
 
-const ProductListByQuery = ({ products, query }) => {
+const ProductListByQuery = ({ products }) => {
+    const [searchParams] = useSearchParams();
+    const query = searchParams.get('query') || '';
+
     const filteredProducts = products.filter(product =>
         product.title.toLowerCase().includes(query.toLowerCase()) ||
         product.author.toLowerCase().includes(query.toLowerCase())

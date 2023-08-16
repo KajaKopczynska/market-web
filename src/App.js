@@ -32,7 +32,7 @@ function App() {
         <Route path="/cooming-soon" element={<UnderConstruction />} />
         <Route path="/cooming-soon" element={<UnderConstruction />} />
         <Route path="/products/:id" element={<ProductPage />} />
-        <Route path="/search" element={<ProductListByQuery products={products} query={query} />} />
+        <Route path="/search" element={<ProductListByQuery products={products} query={query || ""} />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
