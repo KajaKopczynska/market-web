@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import useQueryParameter, { searchQueryParamName } from "../../useQueryParameter";
 import { useReplaceQueryParameter } from "../../useReplaceQueryParameter";
-import { SearchIcon, SearchInput, SearchWrapper } from "./styled";
+import { SearchIcon, SearchInput, SearchWrapper, StyledSearchLink } from "./styled";
 import { fetchSearchLoading, fetchSearchSuccess, selectSearchQuery } from "./searchSlice";
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Search = () => {
     const dispatch = useDispatch();
@@ -13,11 +14,9 @@ export const Search = () => {
     const replaceQueryParameter = useReplaceQueryParameter();
 
     const onInputChange = ({ target }) => {
-
-        console.log("New query:", query);
         replaceQueryParameter({
             key: searchQueryParamName,
-            value: target.value.trim(),
+            value: target.value.trim() !== "" ? target.value : undefined,
         });
     };
 
@@ -34,7 +33,9 @@ export const Search = () => {
                     value={query || ""}
                     onChange={onInputChange}
                 />
-                <SearchIcon />
+                <StyledSearchLink to={`/search?query=${query}`}>
+                    <SearchIcon />
+                </StyledSearchLink>
             </SearchWrapper>
         </>
     );

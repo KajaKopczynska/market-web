@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { ReactComponent as IconSearch } from "./SearchIcon.svg";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
@@ -39,4 +40,8 @@ export const SearchIcon = styled(IconSearch)`
   width: 17px;
   height: 17px;
   }
+`;
+
+export const StyledSearchLink = styled(Link)`
+
 `;

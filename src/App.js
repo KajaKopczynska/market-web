@@ -10,8 +10,12 @@ import ProductListByGenre from "./features/ProductsList/ProductListByGenre";
 import { products } from "./productsData";
 import ProductListByType from "./features/ProductsList/ProductListByType";
 import UnderConstruction from "./pages/UnderConstruction";
+import ProductListByQuery from "./features/ProductsList/ProductListByQuery";
+import { useSelector } from "react-redux";
+import { selectSearchQuery } from "./features/Search/searchSlice";
 
 function App() {
+  const query = useSelector(selectSearchQuery);
 
   return (
     <>
@@ -28,6 +32,7 @@ function App() {
         <Route path="/cooming-soon" element={<UnderConstruction />} />
         <Route path="/cooming-soon" element={<UnderConstruction />} />
         <Route path="/products/:id" element={<ProductPage />} />
+        <Route path="/search" element={<ProductListByQuery products={products} query={query} />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
