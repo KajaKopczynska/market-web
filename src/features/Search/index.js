@@ -1,42 +1,54 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import useQueryParameter, { searchQueryParamName } from "../../useQueryParameter";
-import { useReplaceQueryParameter } from "../../useReplaceQueryParameter";
 import { SearchIcon, SearchInput, SearchWrapper, StyledSearchLink } from "./styled";
-import { fetchSearchLoading, fetchSearchSuccess, selectSearchQuery } from "./searchSlice";
-import React from "react";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { fetchSearchSuccess } from "./searchSlice";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Search = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const query = useQueryParameter(searchQueryParamName);
-    const replaceQueryParameter = useReplaceQueryParameter();
+    const [inputQuery, setInputQuery] = useState(query || "");
 
     const onInputChange = ({ target }) => {
-        replaceQueryParameter({
-            key: searchQueryParamName,
-            value: target.value.trim() !== "" ? target.value : undefined,
-        });
+        setInputQuery(target.value);
     };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        dispatch(fetchSearchSuccess(query));
+        if (inputQuery.trim() !== "") {
+            dispatch(fetchSearchSuccess(inputQuery));
+            navigate(`/search?query=${inputQuery}`);
+        }
     };
 
+    useEffect(() => {
+        const handleKeyPress = (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                onFormSubmit(event);
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyPress);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyPress);
+        };
+    }, [inputQuery]);
+
     return (
-        <>
-            <SearchWrapper onSubmit={onFormSubmit}>
-                <SearchInput
-                    placeholder={`Search by Title or Author`}
-                    value={query || ""}
-                    onChange={onInputChange}
-                />
-                <StyledSearchLink to={`/search?query=${query}`}>
-                    <SearchIcon />
-                </StyledSearchLink>
-            </SearchWrapper>
-        </>
+        <SearchWrapper onSubmit={onFormSubmit}>
+            <SearchInput
+                placeholder={`Search by Title or Author`}
+                value={inputQuery}
+                onChange={onInputChange}
+            />
+            <StyledSearchLink to={`/search?query=${inputQuery}`}>
+                <SearchIcon />
+            </StyledSearchLink>
+        </SearchWrapper>
     );
 };

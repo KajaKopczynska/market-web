@@ -27,7 +27,19 @@ export const SearchInput = styled.input`
   }
 
   @media (max-width: ${mobileBP}px) {
-    width: 275px;
+    width: 100%;
+  }
+`;
+
+
+export const StyledSearchLink = styled(Link)`
+  color: ${({ theme }) => theme.colors.mineShaft};
+  display: grid;
+  transition: color 0.2s, border 0.2s, transform 0.3s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.cornflowerBlue};
+    transform: scale(1.1);
   }
 `;
 
@@ -35,13 +47,4 @@ export const SearchIcon = styled(IconSearch)`
   flex-shrink: 0;
   width: 22px;
   margin: 10px 10px 10px 5px;
-
-  @media (max-width: ${mobileBP}px) {
-  width: 17px;
-  height: 17px;
-  }
-`;
-
-export const StyledSearchLink = styled(Link)`
-
 `;

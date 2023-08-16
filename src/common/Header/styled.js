@@ -54,12 +54,12 @@ export const NavigationWrapper = styled.div`
   @media (max-width: ${mobileBP}px) {
     grid-row-start: 1;
     grid-column-start: 2;
-    grid-gap: 20px;
+    /* grid-gap: 20px; */
   }
 `;
 
 export const SearchWrapper = styled.div`
-  display: flex;
+  display: grid;
   justify-content: center;
 
   @media (max-width: ${mobileBP}px) {
@@ -68,6 +68,7 @@ export const SearchWrapper = styled.div`
     grid-column-end: 3;
   }
 `;
+
 
 export const CategoryMenuWrapper = styled.div`
    grid-column-start: 2;
