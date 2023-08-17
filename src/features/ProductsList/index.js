@@ -6,6 +6,7 @@ import ProductTile from './ProductTile';
 import { productsLoading, selectStatus } from '../../pages/ProductPage/productsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import {Loading} from "../../common/status/Loading";
+import { Error } from '../../common/status/Error';
 
 const ProductList = ({ products }) => {
 
@@ -25,7 +26,7 @@ const ProductList = ({ products }) => {
             {stateOfLoading === "loading" ? (
                 <Loading />
             ) : stateOfLoading === "error" ? (
-                <h1>error</h1>
+                <Error />
             ) : (
                 <Container>
                     <SectionTitle>Best Selling Books</SectionTitle>
