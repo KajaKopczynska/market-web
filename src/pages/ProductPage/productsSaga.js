@@ -1,5 +1,4 @@
-// import { getProductsFromApi } from "./getProductsFromApi";
-import { call, put, takeLatest } from "redux-saga/effects";
+import { delay, put, takeLatest } from "redux-saga/effects";
 import {
   productsError,
   productsLoading,
@@ -7,10 +6,9 @@ import {
 } from "./productsSlice";
 import { products } from '../../productsData';
 
-
 function* watchFetchProductsHandler() {
   try {
-    // const products = yield call(getProductsFromApi);
+    yield delay(1000);
     yield put(productsSuccess(products));
   } catch (error) {
     yield put(productsError());
