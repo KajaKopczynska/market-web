@@ -54,16 +54,16 @@ const Footer = () => {
                                     <StyledLink>Search</StyledLink>
                                     <StyledLink>About Us</StyledLink>
                                     <StyledLink>Faq</StyledLink>
-                                    <StyledLink>Concact</StyledLink>
+                                    <StyledLink>Contact</StyledLink>
                                 </FooterInfoContent>
                             </FooterInfoElement>
                             <FooterInfoElement>
                                 <FooterInfoTitle>Quick Links</FooterInfoTitle>
                                 <FooterInfoContent>
-                                    <StyledLink>Books</StyledLink>
-                                    <StyledLink>Audiobooks</StyledLink>
-                                    <StyledLink>Music</StyledLink>
-                                    <StyledLink>Games</StyledLink>
+                                    <StyledLink to="/books">Books</StyledLink>
+                                    <StyledLink to="/audiobooks">Audiobooks</StyledLink>
+                                    <StyledLink to="/cooming-soon">Music</StyledLink>
+                                    <StyledLink to="/cooming-soon">Games</StyledLink>
                                 </FooterInfoContent>
                             </FooterInfoElement>
                         </FooterInfo>

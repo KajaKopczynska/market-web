@@ -103,6 +103,7 @@ export const InputButton = styled.span`
   margin: 5px;
   border-radius: 5px;
   transition: background-color 0.2s, color 0.2s, border 0.2s;
+  cursor: pointer;
 
   &:hover {
     color: ${({ theme }) => theme.colors.cornflowerBlue};
