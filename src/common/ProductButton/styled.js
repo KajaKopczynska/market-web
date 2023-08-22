@@ -7,7 +7,7 @@ export const ProductButtonWrapper = styled.div`
   margin: 12px 0 0 0;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   display: grid;
-  grid-template-columns: 40px auto;
+  grid-template-columns: 30px auto;
   align-items: center;
   border-radius: 5px;
   height: 25px;

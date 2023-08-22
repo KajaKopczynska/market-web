@@ -109,3 +109,9 @@ export const ProductLink = styled(Link)`
   cursor: pointer;
   font-size: 22px;
 `;
+
+export const ButtonsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: end;
+`;

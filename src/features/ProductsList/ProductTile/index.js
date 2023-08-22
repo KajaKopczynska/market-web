@@ -2,8 +2,9 @@ import React from 'react'
 // import { Link } from "react-router-dom"
 import { ShoppingCart, Search, Check } from "react-feather"
 // import clsx from "clsx"
-import { AdditionalText, Image, Informations, Price, ProductLink, Subtitle, TextWrapper, TileWrapper, Title } from './styled';
+import { AdditionalText, ButtonsWrapper, Image, Informations, Price, ProductLink, Subtitle, TextWrapper, TileWrapper, Title } from './styled';
 import ProductButton from '../../../common/ProductButton';
+import HeartButton from '../../../common/HeartButton';
 
 
 const ProductTile = ({ link, imgSrc, price, title, author/*, onAddToCart, isInCart*/ }) => {
@@ -19,15 +20,18 @@ const ProductTile = ({ link, imgSrc, price, title, author/*, onAddToCart, isInCa
                     <Subtitle>{author}</Subtitle>
                     <Price>${price}</Price>
                 </Informations>
-                {/* {isInCart ? (
+                <ButtonsWrapper>
+                    {/* {isInCart ? (
 						<Link to="/cart">
 							<ProductButton>
 								<Check />
 							</ProductButton>
 						</Link>
 					):(  */}
-                <ProductButton /*onClick={onAddToCart}*/ />
-                {/* )} */}
+                    <ProductButton /*onClick={onAddToCart}*/ />
+                    <HeartButton />
+                </ButtonsWrapper>
+
             </TextWrapper>
 
         </TileWrapper>
