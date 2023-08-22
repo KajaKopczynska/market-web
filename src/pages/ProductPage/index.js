@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Container } from "../../common/Container";
-import { Details, Image, Info1, Info2, Label, Price, ProductPageWrapper, Subtitle, Summary, SummaryTitle, Title } from "./styled";
+import { ButtonsWrapper, Details, Image, Info1, Info2, Label, Price, ProductPageWrapper, Subtitle, Summary, SummaryTitle, Title } from "./styled";
 import { getProductById } from "./productsSlice";
 import ProductButton from "../../common/ProductButton";
 import QuantitySelector from "./QuantitySelector";
 import { useState } from "react";
+import HeartButton from "../../common/HeartButton";
 
 export const ProductPage = () => {
     const { id } = useParams();
@@ -56,7 +57,10 @@ export const ProductPage = () => {
                 <Info2>
                     {product.price && <Price>${product.price}</Price>}
                     <QuantitySelector quantity={quantity} onQuantityChange={handleQuantityChange} />
-                    <ProductButton productPage /*onClick={onAddToCart}*/ />
+                    <ButtonsWrapper>
+                        <ProductButton productPage /*onClick={onAddToCart}*/ />
+                        <HeartButton />
+                    </ButtonsWrapper>
                 </Info2>
                 {product.summary && (
                     <Summary>

@@ -127,6 +127,17 @@ export const Price = styled.div`
   }
 `;
 
+export const ButtonsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 25px;
+  width: 250px;
+
+  @media (max-width: ${mobileBP}px) {
+    grid-gap: 15px;
+  }
+`;
+
 export const Summary = styled.div`
   grid-area: d;
   line-height: 1.5;
