@@ -27,6 +27,7 @@ export const StyledClipboardIcon = styled(ClipboardIcon)`
   width: 26px;
   transition: transform 0.3s ease-in-out, opacity 0.8s;
   opacity: ${({ isHovered }) => (isHovered ? 0 : 1)};
+  justify-self: end;
 
   &.hovered {
         opacity: 0;
@@ -40,6 +41,7 @@ export const StyledClipboardIconHover = styled(ClipboardIconHover)`
   width: 26px;
   transition: transform 0.3s ease-in-out, opacity 0.8s;
   opacity: ${({ isHovered }) => (isHovered ? 0 : 1)};
+  justify-self: end;
 
   &.hovered {
         opacity: 0;
