@@ -38,6 +38,8 @@ export const ProductPageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
+  max-height: 500px;
+  max-width: 320px;
   margin-bottom: 20px;
   grid-area: im;
 
